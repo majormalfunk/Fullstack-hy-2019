@@ -23,7 +23,6 @@ const App = (props) => {
   const selectRandom = [Math.floor(Math.random() * anecdotes.length)]
   const [selected, setSelected] = useState(selectRandom)
   const [votes, setVotes] = useState(Array.apply(null, new Array(anecdotes.length)).map(Number.prototype.valueOf, 0))
-  //(Array.apply(null, new Array(anecdotes.length)).map(Number.prototype.valueOf, 0), useState(0))
   const [mostPopular, setPopular] = useState(-1)
 
   const voteThis = anecdote => {
