@@ -1,5 +1,6 @@
 import React from 'react'
 import Languages from './Languages'
+import Weather from './Weather'
 
 const CountryDetails = (props) => {
 
@@ -13,7 +14,12 @@ const CountryDetails = (props) => {
           <h3>Languages</h3>
           <Languages languages={props.country.languages} />
         </td></tr>
-        <tr><td colSpan="2"><img src={props.country.flag} alt="flag" width="150px" /></td></tr>
+        <tr><td colSpan="2">
+          <img src={props.country.flag} alt={"Flag of " + props.country.name} width="150px" />
+        </td></tr>
+        <tr><td colSpan="2">
+          <Weather capital={props.country.capital} />
+        </td></tr>
       </tbody>
     </table>
 
