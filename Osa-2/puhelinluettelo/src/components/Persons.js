@@ -7,7 +7,12 @@ const Persons = (props) => {
     person.name.toUpperCase().includes(props.nameFilter.toUpperCase()))
 
   const rows = () => personsToShow.map(person =>
-    <Person key={person.id} person={person} />
+    <Person
+      key={person.id}
+      person={person}
+      doRemove={props.doRemove}
+      handleRemoving={props.handleRemoving}
+    />
   )
   return (
     <>{rows()}</>
