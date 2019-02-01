@@ -1,6 +1,7 @@
 import axios from 'axios'
+const baseURL = '/api/persons'
 //const baseURL = 'http://localhost:3001/api/persons'
-const baseURL = 'https://aqueous-depths-57388.herokuapp.com/api/persons'
+//const baseURL = 'https://aqueous-depths-57388.herokuapp.com/api/persons'
 
 const getAll = () => {
   const request = axios.get(baseURL)
